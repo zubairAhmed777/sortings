@@ -6,8 +6,7 @@
 	#define __HEADER__
 	#include"sort.h"
 #endif
-
-////////////////////////////////////////////////
+//hello
 
 void display(int *arr ,int n);
 void compare_array(int *temparray,int *checkarray);

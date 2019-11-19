@@ -74,6 +74,3 @@ void merge(int a[],int temparray[],int lpos,int rpos,int rend)
 		a[rend] = temparray[rend];
 	
 }
-
-
-		

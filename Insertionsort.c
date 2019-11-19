@@ -1,4 +1,4 @@
-/*program to understand Insertion sort. It's like arranging the cards*/
+/*Insertion sort.*/
 #include"sort.h"
 
 

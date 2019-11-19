@@ -1,4 +1,4 @@
-/*program to understand bubblesort*/
+/*Bubblesort*/
 
 
 #include<stdio.h>
@@ -9,9 +9,7 @@ void Bsort(int *arr,int n,int* temparray)
 	//loop runs until the element exists
 	for(int i=0;i<n;i++)
 	{
-		//count is initialised with zero for further increment
-		int count = 0;
-		
+
 		/*loop will execute one element less from last*/
 		for(int j=0;j<n-i-1;j++)
 		{
@@ -22,28 +20,17 @@ void Bsort(int *arr,int n,int* temparray)
 			{
 				//swap function for swapping the two neighbour elements in array
 				Bswap(&arr[j],&arr[j+1]);
-				
-				//count for increment everytime swap happens 
-				//If in this loop swap doesn't occured that means array becomes sorted.
-				count++;
-//				printf("count = %d\n",count);	
+
 			}
 		}
-			//for no swap condition
-			//condition for exiting out of function when no swap occurs
-			if(count == 0)
-			{
-				
-				//copy elements to temparray
+
+		
+	}
 				for(int i=0;i<n;i++)
 				{
 					
 					temparray[i] = arr[i];
 				}
-				return;
-			}
-		
-	}
 
 }
 

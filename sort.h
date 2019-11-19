@@ -11,7 +11,6 @@ void Qswap(int* x,int* y);
 
 //selection sort
 void selsort(int *arr,int n,int* temparray);
-void Sswap(int *x,int *y);
 
 //mergesort
 void msort(int a[],int temporary[],int left,int right);

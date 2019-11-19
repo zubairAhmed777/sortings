@@ -13,23 +13,8 @@ void display(int *arr ,int n);
 void compare_array(int *temparray,int *checkarray);
 int main()
 {
-	
-	    //printf("Enter the number of list elements\n");
-	    //scanf("%d",&N);
-
-	    //array declared an initialised
 	    int arr[] = {12,89,45,-34,0,67,12,45,-23,2};
-
-//	    to initialised all the elements to zero
-//	    memset(arr,0,N*sizeof(arr[0]));
-
-	   // printf("Enter the elements\n");
-	    //for(int i=0;i<N;i++)
-	    //{
-		  //  scanf("%d,",&arr[i]);
-	    //}
 	
-
 		int *temparray;
 		temparray = malloc(N*sizeof(int));
 	    printf("The elements Entered are\n");
@@ -37,38 +22,29 @@ int main()
 	
 	while(1)
 	{
-	    //printf("before sorting array is \n");
-	    //display(arr,N);
-
 
 	    int ch;
-	    printf("Enter the sorting technique\n1.Bubble Sort\n2.Insertion Sort\n3.Quick Sort\n4.Selection Sort\n5.Merge Sort\n");
+	    printf("Enter the sorting technique\n1.Bubble Sort\n2.Insertion Sort\n3.Quick Sort\n4.Selection Sort\n5)merge_sort\n");
 	    printf("6.Exit\n");
 		scanf("%d",&ch);
-			
-		if(!fflush(stdin) )
-			printf("SUCCESS\n");
-		else
-			printf("FAILURE\n");
+
 		printf("Your selected option is %d\n",ch);
 	    switch(ch)
 	    {
 		    case 1:
 				Bsort(arr,N,temparray);
-				//printing array after sorting
 				display(arr,N);
-				
 				break;
 		    case 2:
-	            inssort(arr,N,temparray);			
+	            		inssort(arr,N,temparray);			
 				display(arr,N);
 				break;
 		    case 3:
-	           quick_sort(arr,0,N-1,N-1,temparray);	
+	           		quick_sort(arr,0,N-1,N-1,temparray);	
 				display(arr,N);
 				break;
 		    case 4:
-	            selsort(arr,N,temparray);			
+	            		selsort(arr,N,temparray);			
 				display(arr,N);
 				break;
 		    case 5:

@@ -85,6 +85,7 @@ while(i<N && arr[i]!=EOF)
 		fprintf(fp2,"%d\t",arr[i]);
 		i++;
 	}
+fprintf(fp2,"\n");
 		
 		int checkarray[] = {-34,-23,0,2,12,12,45,45,67,89};
 		compare_array(temparray,checkarray);

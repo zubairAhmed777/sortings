@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-#define N 10
+//#define N 10
 #ifndef __HEADER__
 	#define __HEADER__
 	#include"sort.h"
@@ -9,11 +9,34 @@
 
 ////////////////////////////////////////////////
 
+int N;
+
+
 void display(int *arr ,int n);
 void compare_array(int *temparray,int *checkarray);
 int main()
 {
-	    int arr[] = {12,89,45,-34,0,67,12,45,-23,2};
+	FILE *fp,*fp1,*fp2;
+	fp=fopen("./data.txt","r");
+	if(fp==NULL){
+		printf("data.txt failed..\n");return -1;
+	}
+	fp1=fopen("./check.txt","r");
+	if(fp1==NULL){
+		printf("check.txt failed..\n");return -1;
+	}
+	fp2=fopen("./result.txt","a+");
+	if(fp2==NULL){
+		printf("result.txt failed..\n");return -1;
+	}
+
+fscanf(fp,"%d\t",&N);
+
+	    int i=0,arr[N]; //= {12,89,45,-34,0,67,12,45,-23,2};
+while(i<N && arr[i]!=EOF)
+{
+	fscanf(fp,"%d\t",(arr+i));i++;
+}
 	
 		int *temparray;
 		temparray = malloc(N*sizeof(int));
@@ -53,9 +76,16 @@ int main()
 				break;
 		    case 6:
 				exit(0);
+				fclose(fp);fclose(fp2);fclose(fp1);
 			
 			
-	    }
+	    }i=0;
+	while(i<N)
+	{
+		fprintf(fp2,"%d\t",arr[i]);
+		i++;
+	}
+		
 		int checkarray[] = {-34,-23,0,2,12,12,45,45,67,89};
 		compare_array(temparray,checkarray);
 		
